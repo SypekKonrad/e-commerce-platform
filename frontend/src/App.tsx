@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import Navbar from './components/Navbar'; // Adjust paths based on your structure
+import Carousel from './components/Carousel'; // Assuming you created a carousel
+import Footer from './components/Footer';
 import './App.css';
+import ProductCarousel from "./components/Carousel"; // Global styles for the App, if needed
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <main>
+        <ProductCarousel />
+        {/* Add more sections or components here as needed */}
+      </main>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
